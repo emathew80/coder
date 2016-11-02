@@ -1,6 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background-color: rgba(68,67,73,0.9); 
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  border-color: #56AECC;
+  margin-top:10px;
+  margin-bottom:15px;
+  padding:20px;
+}
+
 .btn {
   border-radius:0;
 }
@@ -16,9 +29,13 @@
     border-color: gray;
 }
 
+.clear {
+  background: none;
+}
+
 .frosty{
   text-align: center;
-  padding-top: 30px;
+  transform: translateY(40%);
   padding-bottom: 30px;
   background: rgba(0,0,0,0.5);
 }
@@ -37,6 +54,13 @@
 
 }
 
+.alert .alert-info{
+  background: transparent;
+}
+
+.alert {
+  margin: 0;
+}
 
 .hero{
    background: url('hero.jpeg') no-repeat center center fixed;
@@ -60,7 +84,9 @@
   color: #68D0F2;
   }
 
-
+.label {
+  color: white;
+}
 
 .navbar-inverse a.navbar-brand {
   font-family: "Helvetica Neue", Helvetica;
@@ -68,12 +94,13 @@
 }
 
 body {
-  background: url('bg2.png');
+  background: url('bg3.jpg');
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  color: white;
 
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin:0;
-  color: white;
+  color: #56AECC;
 }

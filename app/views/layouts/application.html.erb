@@ -19,7 +19,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">#Coder</a>
+      <%= link_to '#Coder', root_path, class: 'navbar-brand' %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -27,6 +27,14 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Link</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Sign in or Sign up', new_user_session_path %></li>
+        <% end %> 
+
       </ul>
      <!--  <form class="navbar-form navbar-left">
         <div class="form-group">
@@ -52,12 +60,14 @@
 
 
 <!-- Alert and notice messages -->
+<div class= "clear">
 <% if notice.present? %>
   <p class= "alert alert-info"><%= notice %></p>
 <% end %>
 <% if alert.present? %>
   <p class= "alert alert-info"><%= alert %></p>
 <% end %>
+</div>
 <!-- lert and notice messages end-->
 
 
