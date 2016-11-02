@@ -1,7 +1,52 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.btn {
+  border-radius:0;
+}
 
+.btn-success {
+  background-color: #56AECC;
+  border-color: white;
+}
+
+.btn-success:hover {
+    color: white;
+    background-color: gray;
+    border-color: gray;
+}
+
+.frosty{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: rgba(0,0,0,0.5);
+}
+
+.frosty h1 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+
+}
+
+.frosty h2 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+
+}
+
+
+.hero{
+   background: url('hero.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:370px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+  }
 
 .navbar {
   border-radius:0;
@@ -9,9 +54,10 @@
   font-weight: 200;
 }
 
-.navbar-default .navbar-brand {
+/** Logo **/
+.navbar-inverse .navbar-brand {
   font-size: 30px;
-  color: red;
+  color: #68D0F2;
   }
 
 
@@ -19,4 +65,9 @@
 .navbar-inverse a.navbar-brand {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin:0;
+  color: white;
 }
