@@ -51,7 +51,14 @@
  <!-- Nav bar end -->
 
 
-
+<!-- Alert and notice messages -->
+<% if notice.present? %>
+  <p class= "alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+  <p class= "alert alert-info"><%= alert %></p>
+<% end %>
+<!-- lert and notice messages end-->
 
 
 
