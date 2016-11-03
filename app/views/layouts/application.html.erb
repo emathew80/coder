@@ -21,7 +21,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <!-- <%= link_to '{#Coder}', root_path, class: 'navbar-brand' %>-->
+    
       <%= link_to root_path do %>
         <span class="navbar-brand"><span class= "white">{</span>#<span>Coder</span><span class= "white">}</span></span>
       <% end %>
@@ -31,7 +31,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to 'View all Coder Courses', courses_path %></li>
-        <li><a href="http://elsonmathew.com/">Want More?</a></li>
+        <li><a href="http://elsonmathew.com/" target="_blank">Want More?</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
