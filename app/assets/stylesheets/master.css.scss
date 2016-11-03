@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.center-text{
+  text-align: center;
+}
+
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -12,6 +16,10 @@
   margin-top:10px;
   margin-bottom:15px;
   padding:20px;
+}
+
+.blue{
+  color: #56AECC;
 }
 
 .btn {
@@ -94,6 +102,8 @@
 .navbar-inverse .navbar-brand {
   font-size: 30px;
   color: #68D0F2;
+  font-weight: 100;
+
   }
 
 .label {
@@ -102,17 +112,27 @@
 
 .navbar-inverse a.navbar-brand {
   font-family: "Helvetica Neue", Helvetica;
-  font-weight: 100;
+}
+
+.white {
+  color: white;
 }
 
 body {
   background: url('bg3.jpg');
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100; 
   color: white;
 
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin:0;
+
   color: #56AECC;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
 }
