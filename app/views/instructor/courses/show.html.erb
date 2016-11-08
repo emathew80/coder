@@ -4,5 +4,21 @@
   <p class="text-center"><%= number_to_currency @course.cost %></p>
   <p class="text-center"><%= @course.description %></p>
 
+  <div class="text-center">
+    <%= link_to 'Add a new section...', new_instructor_course_section_path(@course), class: 'btn btn-success' %>
+  </div>
+  <br />
+  <div class="text-center">
+    <%= link_to 'Preview As Student...', course_path(@course), class: 'btn btn-warning' %>
+  </div>
+  <br class="clr" />
+
+  <ul>
+    <% @course.sections.each do |section| %>
+      <li>
+        <%= section.title %>
+      </li>
+    <% end %>
+  </ul>
 
 </div>
