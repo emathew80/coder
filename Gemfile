@@ -19,6 +19,9 @@ gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+gem "figaro"
+gem "fog"
 
 
 # Use jquery as the JavaScript library
