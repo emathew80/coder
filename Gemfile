@@ -22,6 +22,8 @@ gem 'devise'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem "figaro"
 gem "fog"
+gem 'mini_magick', '~> 4.3.1'
+
 
 
 # Use jquery as the JavaScript library
