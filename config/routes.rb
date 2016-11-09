@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   get 'about', to: 'static_pages#about'
   resources :courses, only: [:index, :show]
   namespace :instructor do
+    resources :sections, only: [] do
+      resources :lessons, only: [:new, :create]
+     end
     resources :courses, only: [:new, :create, :show] do
       resources :sections, only: [:new, :create]
+      end
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
@@ -63,4 +67,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
