@@ -38,7 +38,7 @@
         <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-success btn-xs' %>
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url="<%= instructor_lesson_path(lesson) %>">
+            <li class= "cursor1"data-update-url="<%= instructor_lesson_path(lesson) %>">
               <b><%= lesson.title %></b>
 
               -
