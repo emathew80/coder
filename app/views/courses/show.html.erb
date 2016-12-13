@@ -41,7 +41,7 @@
 
   <br/> <br/><div class="col-xs-12"><hr>
   <% if current_user && current_user.enrolled_in?(@course) %>
-    <% @course.sections.each do |section| %>
+    <% @course.sections.rank(:row_order_sections).each do |section| %>
       <br /><br />
       <div class="section"> 
         <h3>
