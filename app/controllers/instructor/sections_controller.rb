@@ -41,6 +41,6 @@ end
   end
 
   def section_params
-    params.require(:section).permit(:title, :row_order_sections_position)
+    params.require(:section).permit(:title, :row_order_section_position)
   end
 end
