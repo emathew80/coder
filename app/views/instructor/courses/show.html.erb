@@ -48,18 +48,36 @@ $(function() {
   <div class="text-center">
     <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-success' %>
   </div>
+  <br />
 
   <ul class="sect">
     <% current_course.sections.rank(:row_order_sections).each do |section| %>
-          <li data-update-url-s="<%= instructor_section_path(section) %>">
-        <%= section.title %>
+      <li class= "cursor1 section-li" data-update-url-s="<%= instructor_section_path(section) %>" class="">
+        <div class="header">
+           <span class="glyphicon glyphicon-list"></span>
+            <%= section.title %>
+       </div>
         <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-success btn-xs' %>
+        <br class="clr" />
+        <br class="clr" />
+
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <li class= "cursor1" data-update-url="<%= instructor_lesson_path(lesson) %>">
-              <b><%= lesson.title %></b>
-              -
-              <%= lesson.subtitle %>
+              <div class="col-xs-1">
+                  <br/>
+                  <span class="glyphicon glyphicon-list"></span>
+              </div>
+              <div class="col-xs- text-center">
+
+                <p>
+                  <b><%= lesson.title %></b>
+                </p>
+                <p>
+                  <%= lesson.subtitle %>
+                </p>
+              </div>
+              <br class="clr" />
             </li>
           <% end %>
         </ul>
