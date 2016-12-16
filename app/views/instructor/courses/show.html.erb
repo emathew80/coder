@@ -1,16 +1,34 @@
 <script>
-  $(function() {
-    $('.lessons').sortable({
-      update: function( event, ui ) {
-        $.ajax({
-          type: 'PUT',
-          url: ui.item.data('update-url'),
-          dataType: 'json',
-          data: { lesson: { row_order_position: ui.item.index() } }
+$(function() {
+      $('.sect').sortable({
+        update: function(event, ui) {
+          $.ajax({
+            type: 'PUT',
+            url: ui.item.data('update-url-s'),
+            dataType: 'json',
+            data: {
+              section: {
+                row_order_sections_position: ui.item.index()
+              }
+            }
+          });
+        }
+      });
+        $('.lessons').sortable({
+          update: function(event, ui) {
+            $.ajax({
+              type: 'PUT',
+              url: ui.item.data('update-url'),
+              dataType: 'json',
+              data: {
+                lesson: {
+                  row_order_position: ui.item.index()
+                }
+              }
+            });
+          }
         });
-      }
-    });
-   });
+      });
 </script>
 
 <br />
@@ -31,16 +49,15 @@
     <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-success' %>
   </div>
 
-  <ul>
+  <ul class="sect">
     <% current_course.sections.rank(:row_order_sections).each do |section| %>
-      <li>
-        <div class="reveal"> <%= section.title + " +" %></div>
+          <li data-update-url-s="<%= instructor_section_path(section) %>">
+        <%= section.title %>
         <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-success btn-xs' %>
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li class= "cursor1"data-update-url="<%= instructor_lesson_path(lesson) %>">
+            <li class= "cursor1" data-update-url="<%= instructor_lesson_path(lesson) %>">
               <b><%= lesson.title %></b>
-
               -
               <%= lesson.subtitle %>
             </li>
