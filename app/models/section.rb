@@ -4,4 +4,12 @@ class Section < ActiveRecord::Base
 
   include RankedModel
   ranks :row_order_sections, :with_same => :course_id
+
+
+  def next_section
+    section = course.sections.where("row_order_sections > ?", self.row_order_sections).rank(:row_order_sections).first
+
+    return section
+  end
+
 end
