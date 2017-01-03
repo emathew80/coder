@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
   get 'about', to: 'static_pages#about'
+  get 'privacy', to: 'static_pages#privacy'
+
   resources :courses, only: [:index, :show] do
   resources :enrollments, only: :create
   end
