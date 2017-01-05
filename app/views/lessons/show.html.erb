@@ -10,7 +10,7 @@
 
 
 <% if current_lesson.video.to_s.present? %>
-      <video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls
+      <video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid vjs-16-9" controls
      preload="auto" width="auto" height="auto" poster="/assets/black.jpg"
      data-setup="{}">
        <source src="<%= current_lesson.video.to_s %>" type='video/mp4'>
